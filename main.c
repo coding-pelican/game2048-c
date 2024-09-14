@@ -6,7 +6,7 @@
  * @details This is a simple implementation of the 2048 game in C.
  *
  * @version 0.1
- * @date 2024-09-14
+ * @date 2024-02-02
  *
  * @copyright Released under the MIT License. See LICENSE file for details.
  */
