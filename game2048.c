@@ -1,3 +1,17 @@
+/**
+ * @file game2048.c
+ * @author Gyeongtae Kim(dev-dasae) <codingpelican@gmail.com>
+ *
+ * @brief Implements a set of functions for playing the 2048 game.
+ * @details This file implements a set of functions for playing the 2048 game.
+ *
+ * @version 0.1
+ * @date 2024-09-14
+ *
+ * @copyright Released under the MIT License. See LICENSE file for details.
+ */
+
+
 #include "game2048.h"
 #include "random.h"
 
@@ -121,18 +135,6 @@ void Board_moveTiles(int board[Board_kSize][Board_kSize], char direction) {
     }
 }
 
-int Game_overs(int board[Board_kSize][Board_kSize]) {
-    // Check if any move is possible (either an empty tile or a possible merge)
-    for (int i = 0; i < Board_kSize; ++i) {
-        for (int j = 0; j < Board_kSize; ++j) {
-            if (board[i][j] == 0 || (i < Board_kSize - 1 && board[i][j] == board[i + 1][j]) || (j < Board_kSize - 1 && board[i][j] == board[i][j + 1])) {
-                return false; // Game is not over
-            }
-        }
-    }
-    return true; // No moves left, game over
-}
-
 void Screen_drawBoard(int board[Board_kSize][Board_kSize]) {
     Screen_clear();
 
@@ -148,7 +150,6 @@ void Screen_drawBoard(int board[Board_kSize][Board_kSize]) {
     }
 }
 
-// Main function (for testing purposes)
 int Game_run2048() {
     int  board[Board_kSize][Board_kSize] = { 0 };
     char user_input                      = 0;
@@ -173,4 +174,16 @@ int Game_run2048() {
     }
 
     return 0;
+}
+
+int Game_overs(int board[Board_kSize][Board_kSize]) {
+    // Check if any move is possible (either an empty tile or a possible merge)
+    for (int i = 0; i < Board_kSize; ++i) {
+        for (int j = 0; j < Board_kSize; ++j) {
+            if (board[i][j] == 0 || (i < Board_kSize - 1 && board[i][j] == board[i + 1][j]) || (j < Board_kSize - 1 && board[i][j] == board[i][j + 1])) {
+                return false; // Game is not over
+            }
+        }
+    }
+    return true; // No moves left, game over
 }
