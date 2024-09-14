@@ -1,0 +1,37 @@
+############ Global ############
+################################
+---
+Index:
+  Background: Skip
+  StandardLibrary: No
+InlayHints:
+  Enabled: true
+  TypeNameLimit: 24
+  DeducedTypes: true
+  ParameterNames: true
+  Designators: true
+  BlockEnd: false
+Hover:
+  ShowAKA: false
+Diagnostics:
+  Suppress:
+    - ".*include/c/.*"
+    - ".*include/c\\+\\+/.*"
+---
+If:
+  PathMatch:
+    - .*\.h
+    - .*\.hh
+    - .*\.hxx
+    - .*\.hpp
+CompileFlags:
+  Add: [-Wno-unused-function, -Wno-unused-const-variable]
+---
+# C Configs
+If:
+  PathMatch:
+    - .*\.c
+    - .*\.h
+CompileFlags:
+  Compiler: clang
+  Add: [-xc, -std=c17, -Wall, -Wextra, -Werror]
