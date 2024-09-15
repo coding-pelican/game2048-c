@@ -41,7 +41,7 @@ clang main.c game2048.c -o game2048
 ./game2048
 ```
 
-### Gameplay
+## Gameplay
 
 - Use the WASD keys to move the tiles:
   - W: Move up
@@ -51,7 +51,7 @@ clang main.c game2048.c -o game2048
 - Merge tiles with the same number to create larger numbers
 - The game ends when no more moves are possible
 
-### Code Structure
+## Code Structure
 
 The project consists of the following files:
 
@@ -61,7 +61,7 @@ The project consists of the following files:
 - `random.h`: Header file for random number generation
 - `README.md`: This readme file providing an overview of the project
 
-### Future Improvements
+## Future Improvements
 
 - Add score tracking
 - Implement high score system
@@ -69,16 +69,16 @@ The project consists of the following files:
 - Implement undo functionality
 - Add game board size selection option
 
-### License
+## License
 
 This project is released under the MIT License. See the [LICENSE](README.md) file for more details.
 
-### Contributing
+## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a
 pull request.
 
-### Contact
+## Contact
 
 For any questions or inquiries, please contact the project author:
 - Name: Gyeongtae Kim
