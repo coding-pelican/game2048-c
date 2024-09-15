@@ -1,4 +1,4 @@
-# game2048-c
+# Game 2048
 
 This is an implementation of the classic 2048 game in C. The game is played in the console window and features the iconic sliding and merging of numbered tiles.
 
@@ -55,22 +55,23 @@ clang main.c game2048.c -o game2048
 
 The project consists of the following files:
 
+- `main.c`: The main entry point of the program
 - `game2048.c`: The main game logic and rendering code
 - `game2048.h`: Header file containing function declarations and constants
 - `random.h`: Header file for random number generation
 - `README.md`: This readme file providing an overview of the project
 
+### Future Improvements
+
+- Add score tracking
+- Implement high score system
+- Add color support for better visualization
+- Implement undo functionality
+- Add game board size selection option
+
 ### License
 
 This project is released under the MIT License. See the [LICENSE](README.md) file for more details.
-
-### Future Improvements
-
-Add score tracking
-Implement high score system
-Add color support for better visualization
-Implement undo functionality
-Add game board size selection option
 
 ### Contributing
 
